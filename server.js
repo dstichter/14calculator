@@ -8,29 +8,29 @@ app.get("/addition/:var1/:var2", function(req, res) {
   var y = parseInt(req.params.var2)
   var z = (x + y)
   var response = z.toString()
-  res.write(response)
+  res.send(response)
 
 });
 app.get("/subtract/:var1/:var2", function(req, res) {
   var x = parseInt(req.params.var1)
   var y = parseInt(req.params.var2)
-
-  var response = x - y
-  res.sendStatus(response)
+  var z = (x - y)
+  var response = z.toString()
+  res.send(response)
 });
 app.get("/multiply/:var1/:var2", function(req, res) {
   var x = parseInt(req.params.var1)
   var y = parseInt(req.params.var2)
-
-  var response = x * y
-  res.sendStatus(response)
+  var z = (x * y)
+  var response = z.toString()
+  res.send(response)
 });
 app.get("/divide/:var1/:var2", function(req, res) {
   var x = parseInt(req.params.var1)
   var y = parseInt(req.params.var2)
-
-  var response = x / y
-  res.sendStatus(response)
+  var z = (x / y)
+  var response = z.toString()
+  res.send(response)
 });
 
 
