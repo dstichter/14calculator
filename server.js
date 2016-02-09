@@ -6,9 +6,9 @@ var PORT = 8090;
 app.get("/addition/:var1/:var2", function(req, res) {
   var x = parseInt(req.params.var1)
   var y = parseInt(req.params.var2)
-
-  var response = x + y
-  res.sendStatus(response)
+  var z = (x + y)
+  var response = z.toString()
+  res.write(response)
 
 });
 app.get("/subtract/:var1/:var2", function(req, res) {
